@@ -1,0 +1,21 @@
+import './ResetButton.css';
+
+interface ResetButtonProps {
+  onReset: () => void;
+  disabled?: boolean;
+}
+
+const ResetButton = ({ onReset, disabled = false }: ResetButtonProps) => {
+  return (
+    <button
+      className='reset-button'
+      onClick={onReset}
+      disabled={disabled}
+      aria-label='Reset game to start over'
+    >
+      🔄 Reset Game
+    </button>
+  );
+};
+
+export default ResetButton;
